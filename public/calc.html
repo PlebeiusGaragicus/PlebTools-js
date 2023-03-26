@@ -8,14 +8,14 @@
     <!-- <link rel="stylesheet" href="./styles.css"> -->
     <style>
         html {
-            background: black;
+            background: rgb(148, 80, 163);
             height: 100%;
             overflow: hidden;
         }
 
         body {
             /* background-color: black; */
-            color: orange;
+            color: rgb(0, 0, 0);
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
@@ -26,13 +26,27 @@
 </head>
 
 <body>
-    <p id="hi">hi</p>
-    <!-- <canvas id="bitrain"></canvas> -->
-    <!-- <div class="content">
-        <div class="block-height" id="blockHeight">Loading...</div>
-    </div> -->
+    <h1>Bitcoin Mining Profitability Calculator</h1>
+    <form id="miningForm">
+        <label for="blockHeight">Block Height:</label>
+        <input type="number" id="blockHeight" name="blockHeight" readonly>
+        <br><br>
+        <!-- <label for="difficulty">Difficulty:</label>
+        <input type="number" id="difficulty" name="difficulty" step="any" readonly> -->
+        <label for="difficulty">Difficulty:</label>
+        <input type="text" id="difficulty" name="difficulty" step="any" readonly>
+        <br><br>
+        <label for="subsidy">Current Block Subsity:</label>
+        <input type="number" id="subsidy" name="subsidy" readonly>
+        <br><br>
+        <label for="myHashrate">My Hashrate:</label>
+        <input type="number" id="myHashrate" name="myHashrate" min=0 step="any" required>
+        <br><br>
+        <button type="submit">Calculate</button>
+    </form>
 
-    <script src="calc.js"></script>
+    <script src="calc.js" type="module"></script>
 </body>
+
 
 </html>
